@@ -121,7 +121,7 @@
         }
       }
     },
-    appendTo: function (parentEl) {
+    renderTo: function (parentEl) {
       for (var i = 0; i < this._items.length; i++) {
         this._items[i].render()
       }
@@ -130,7 +130,7 @@
   };
 
   var pageMenu = new Menu(Config.menu);
-  pageMenu.appendTo(document.querySelector('.navbar'));
+  pageMenu.renderTo(document.querySelector('.navbar'));
   pageMenu.getItemByIndex(1).on('toggle', function (item) {
     item.toggleActive();
   });
